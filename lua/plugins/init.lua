@@ -61,4 +61,9 @@ return {
     "tpope/vim-fugitive",
     lazy = false,
   },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
 }
