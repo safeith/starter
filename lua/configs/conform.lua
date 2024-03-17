@@ -6,6 +6,7 @@ local options = {
     python = { "black", "mypy", "isort" },
     terraform = { "tflint" },
     go = { "goimports", "gofmt" },
+    json = { "fixjson" },
   },
 
   format_on_save = function(bufnr)

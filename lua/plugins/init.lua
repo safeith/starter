@@ -33,6 +33,7 @@ return {
         "terraform-ls",
         "gopls",
         "goimports",
+        "fixjson",
       },
     },
   },
