@@ -34,6 +34,8 @@ return {
         "gopls",
         "goimports",
         "fixjson",
+        "yamlfmt",
+        "actionlint",
       },
     },
   },
