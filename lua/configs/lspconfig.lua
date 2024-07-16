@@ -14,3 +14,20 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.yamlls.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      schemas = {
+        ["https://json.schemastore.org/github-action.json"] = ".github/action.{yml,yaml}",
+        ["https://json.schemastore.org/github-workflow.json"] = ".github/workflows/*.{yml,yaml}",
+      },
+      format = {
+        enable = true,
+      },
+    },
+  },
+}

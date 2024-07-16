@@ -7,7 +7,7 @@ local options = {
     terraform = { "tflint" },
     go = { "goimports", "gofmt" },
     json = { "fixjson" },
-    yaml = { "yamlfmt" },
+    yaml = { "yamlls" },
   },
 
   format_on_save = function(bufnr)
