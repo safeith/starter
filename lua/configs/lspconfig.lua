@@ -24,6 +24,7 @@ lspconfig.yamlls.setup {
       schemas = {
         ["https://json.schemastore.org/github-action.json"] = ".github/action.{yml,yaml}",
         ["https://json.schemastore.org/github-workflow.json"] = ".github/workflows/*.{yml,yaml}",
+        ["https://json.schemastore.org/cloudbuild.json"] = "cloudbuild.{yaml,yml}",
       },
       format = {
         enable = true,
