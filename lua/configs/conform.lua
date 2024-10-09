@@ -2,11 +2,12 @@ local options = {
   lsp_fallback = true,
 
   formatters_by_ft = {
-    lua = { "stylua" },
-    python = { "black", "mypy", "isort" },
-    terraform = { "tflint" },
     go = { "goimports", "gofmt" },
     json = { "fixjson" },
+    lua = { "stylua" },
+    python = { "black", "mypy", "isort" },
+    rust = { "rustfmt" },
+    terraform = { "tflint" },
     yaml = { "yamlls" },
   },
 

@@ -1,11 +1,12 @@
 local configs = require "nvchad.configs.lspconfig"
+local util = require "lspconfig/util"
 
 local on_attach = configs.on_attach
 local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "pyright", "terraformls", "gopls" }
+local servers = {}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -19,6 +20,7 @@ lspconfig.yamlls.setup {
   on_init = on_init,
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = { "yaml" },
   settings = {
     yaml = {
       schemas = {
@@ -31,4 +33,43 @@ lspconfig.yamlls.setup {
       },
     },
   },
+}
+
+lspconfig.rust_analyzer.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" },
+  root_dir = util.root_pattern "Cargo.toml",
+  settings = {
+    ["rust_analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+}
+
+lspconfig.terraformls.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "terraform" },
+  settings = {},
+}
+
+lspconfig.gopls.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "go" },
+  settings = {},
+}
+
+lspconfig.pyright.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
+  settings = {},
 }
