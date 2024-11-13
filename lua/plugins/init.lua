@@ -15,11 +15,6 @@ return {
   },
 
   {
-    "github/copilot.vim",
-    lazy = true,
-  },
-
-  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -75,14 +70,8 @@ return {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-
   {
-    "iamcco/markdown-preview.nvim",
+    "hashivim/vim-terraform",
     lazy = false,
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
   },
 }

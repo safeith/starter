@@ -54,7 +54,7 @@ lspconfig.terraformls.setup {
   on_init = on_init,
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "terraform" },
+  filetypes = { "terraform", "tf", "hcl" },
   settings = {},
 }
 
