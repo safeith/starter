@@ -22,8 +22,3 @@ map("n", "<leader>fd", "<cmd> FormatDisable<CR>", { desc = "Disable formatter" }
 
 -- Gitsigns toggle current line blame
 map("n", "<leader>tb", "<cmd> Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle Current Line Blame" })
-
--- Markdown Preview
-map("n", "<leader>mp", "<cmd> :MarkdownPreviewToggle<CR>", { desc = "Markdown Preview" })
--- Markdown Preview Stop
-map("n", "<leader>ms", "<cmd> :arkdownPreviewStop<CR>", { desc = "Markdown Preview Stop" })
