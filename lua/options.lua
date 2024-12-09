@@ -1,3 +1,5 @@
 require "nvchad.options"
 
--- add yours here!
+-- Custom options
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
