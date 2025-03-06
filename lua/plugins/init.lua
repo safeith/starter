@@ -74,4 +74,28 @@ return {
     "hashivim/vim-terraform",
     lazy = false,
   },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  {
+    "kiddos/gemini.nvim",
+    lazy = true,
+    config = function()
+      require("gemini").setup {
+        model_config = {
+          model_id = "gemini-2.0-flash",
+        },
+      }
+    end,
+  },
 }
